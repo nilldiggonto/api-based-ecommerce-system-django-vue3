@@ -30,6 +30,8 @@
         </h3>
         <p class="is-size-6 has-text-grey">
           ${{product.price}}
+
+          <router-link v-bind:to="product.get_absolute_url" class="button is-dark mt-4">View Details</router-link>
         </p>
       </div>
     </div><!--column-3--->
