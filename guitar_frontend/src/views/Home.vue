@@ -55,10 +55,13 @@ export default {
   },
   mounted() {
     this.getLatestProducts()
+    document.title ='Home | Guitar'
+
   },
   methods: {
-    getLatestProducts(){
-      axios
+    async getLatestProducts(){
+      this.$store.commit('setIsLoading',true)
+      await axios
         .get('api/v1/latest-products/')
         .then(response => {
           console.log(response.data)
