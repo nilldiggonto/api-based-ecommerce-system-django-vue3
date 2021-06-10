@@ -13,6 +13,25 @@
       </div> <!--navbar brand-->
 
       <div class="navbar-menu" id="navbar-menu" v-bind:class="{'is-active': showMobileMenu}">
+        <div class="navbar-start">
+          <div class="navbar-item">
+            <form action="/search" method="GET">
+            <div class="field has-addons">
+              <div class="control">
+                <input type="text" name="query" placeholder="search here" class="input">
+              </div>
+
+              <div class="control">
+                <button class="button is-success">
+                  <span class="icon">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+            </form>
+          </div>
+        </div>
         <div class="navbar-end">
           <router-link to="/rock" class="navbar-item" >Rock</router-link>
           <router-link to="/bass" class="navbar-item">Bass</router-link>
